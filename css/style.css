@@ -1,0 +1,86 @@
+/* ==========================================================================
+   1. Global Styles
+   ========================================================================== */
+body {
+    background-color: #faf9f6 !important;
+    color: #4a4a4a !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    border-bottom: 2px solid #e0dcd0 !important;
+    background-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   2. Banner Section (Fixing the background image path)
+   ========================================================================== */
+.hero-banner {
+    /* '../' ka matlab hai css folder se bahar nikal kar images folder mein jana */
+    background-image: url('../images/banner.jpg') !important; 
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 400px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px #000 !important;
+    border-radius: 15px !important;
+}
+
+/* ==========================================================================
+   3. Circular Category Section
+   ========================================================================== */
+.category-img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 3px solid #e0dcd0 !important;
+    display: block !important;
+    margin: 0 auto !important;
+    transition: all 0.3s ease !important;
+}
+
+.category-img:hover {
+    transform: scale(1.1) !important;
+    border-color: #ff6699 !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+    margin-top: 12px !important;
+}
+
+/* ==========================================================================
+   4. Product Cards
+   ========================================================================== */
+.card {
+    transition: all 0.3s ease-in-out !important;
+    border: none !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+.card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2) !important;
+}
+
+/* ==========================================================================
+   5. Mobile Responsiveness
+   ========================================================================== */
+@media (max-width: 576px) {
+    .category-img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .hero-banner {
+        height: 250px !important;
+    }
+}

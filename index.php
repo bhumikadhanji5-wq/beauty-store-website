@@ -6,8 +6,8 @@ include('header.php');
 
 <!-- Banner Section -->
 <div class="container-fluid hero-banner text-center">
-    <h1 class="display-4 fw-bold">Beauty Store se Sajie</h1>
-    <p class="fs-4">Best products, best prices. Aapki sundarta, hamari zimmedari!</p>
+    <h1 class="display-4 fw-bold">Elevate Your Beauty</h1>
+    <p class="fs-4">Premium products, unbeatable prices. Your radiance, our commitment!</p>
     <a href="#products-section" class="btn btn-primary btn-lg">Shop Now</a>
 </div>
 </div>
@@ -46,31 +46,68 @@ include('header.php');
     </div>
 </div>
 
-<!-- Products Section -->
-<div class="container mt-5" id="products-section">
-    <h2 class="text-center mb-4">Featured Products</h2>
+<style>
+    /* Aesthetic Styling */
+    .aesthetic-card {
+        background-color: #F9F7F2; /* Cream/Off-white background */
+        border: 1px solid #D2B48C; /* Light Tan/Brown border */
+        padding: 25px;
+        text-align: center;
+        border-radius: 12px; /* Soft edges */
+        transition: transform 0.3s ease;
+    }
+    .aesthetic-card:hover {
+        transform: translateY(-5px);
+    }
+    .aesthetic-heading {
+        color: #6F4E37; /* Deep Coffee Brown */
+        font-family: 'Segoe UI', sans-serif;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    .btn-aesthetic {
+        background-color: #6F4E37;
+        color: #ffffff;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+    .btn-aesthetic:hover {
+        background-color: #5d4037;
+        color: #ffffff;
+    }
+</style>
+
+<div class="container mt-5 mb-5">
+   <h2 class="text-center aesthetic-heading mb-5">Our Signature Sets</h2>
     <div class="row">
-        <?php
-        $sql = "SELECT * FROM products";
-        $result = mysqli_query($conn, $sql);
-        if (mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                echo '
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">'.$row["name"].'</h5>
-                            <p class="card-text">'.$row["description"].'</p>
-                            <h6 class="text-primary">Rs. '.$row["price"].'</h6>
-                            <a href="add_to_cart.php?pid='.$row["id"].'" class="btn btn-outline-primary">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>';
-            }
-        } else {
-            echo "<p class='text-center'>No products found yet.</p>";
-        }
-        ?>
+        <!-- Kit 1 -->
+        <div class="col-md-4">
+            <div class="aesthetic-card h-100 shadow-sm">
+                <img src="images/velvet_matte.jpg" class="img-fluid mb-3 rounded" style="max-height: 200px;">
+                <h5 class="aesthetic-heading">The Signature Kit</h5>
+                <p class="text-muted">A bold matte finish for your everyday iconic look.</p>
+                <button class="btn btn-aesthetic">View Details</button>
+            </div>
+        </div>
+        <!-- Kit 2 -->
+        <div class="col-md-4">
+            <div class="aesthetic-card h-100 shadow-sm">
+                <img src="images/serum.jpg" class="img-fluid mb-3 rounded" style="max-height: 200px;">
+                <h5 class="aesthetic-heading">Radiance Ritual</h5>
+                <p class="text-muted">For a healthy, natural glow that lasts all day.</p>
+                <button class="btn btn-aesthetic">View Details</button>
+            </div>
+        </div>
+        <!-- Kit 3 -->
+        <div class="col-md-4">
+            <div class="aesthetic-card h-100 shadow-sm">
+                <img src="images/face_wash.jpg" class="img-fluid mb-3 rounded" style="max-height: 200px;">
+                <h5 class="aesthetic-heading">Weekend Reset</h5>
+                <p class="text-muted">Gentle care for your skin after a long week.</p>
+                <button class="btn btn-aesthetic">View Details</button>
+            </div>
+        </div>
     </div>
 </div>
 

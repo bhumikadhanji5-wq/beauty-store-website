@@ -4,15 +4,26 @@ include('db_connect.php');
 include('header.php');
 ?>
 
-<!-- Banner Section -->
-<div class="container-fluid hero-banner text-center">
-    <h1 class="display-4 fw-bold">Elevate Your Beauty</h1>
-    <p class="fs-4">Premium products, unbeatable prices. Your radiance, our commitment!</p>
-    <a href="#products-section" class="btn btn-primary btn-lg">Shop Now</a>
-</div>
-</div>
-
+<!-- Full Background Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 hero-overlay">
+                <h1 class="hero-title">Elevate Your Beauty</h1>
+                <p class="hero-desc">Premium products, unbeatable prices. <br> Your radiance, our commitment!</p>
+                
+                <a href="shop.php" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
     </div>
+</section>
+
+
+                
+            </div>
+        </div>
+    </div>
+</section>
 </div>
 
 <!-- Category Section (Circular Images) -->
@@ -87,7 +98,7 @@ include('header.php');
                 <img src="images/velvet_matte.jpg" class="img-fluid mb-3 rounded" style="max-height: 200px;">
                 <h5 class="aesthetic-heading">The Signature Kit</h5>
                 <p class="text-muted">A bold matte finish for your everyday iconic look.</p>
-                <button class="btn btn-aesthetic">View Details</button>
+                <a href="product.php?id=1" class="btn btn-aesthetic">View Details</a>
             </div>
         </div>
         <!-- Kit 2 -->
@@ -96,7 +107,7 @@ include('header.php');
                 <img src="images/serum.jpg" class="img-fluid mb-3 rounded" style="max-height: 200px;">
                 <h5 class="aesthetic-heading">Radiance Ritual</h5>
                 <p class="text-muted">For a healthy, natural glow that lasts all day.</p>
-                <button class="btn btn-aesthetic">View Details</button>
+                <a href="product.php?id=2" class="btn btn-aesthetic">View Details</a>
             </div>
         </div>
         <!-- Kit 3 -->
@@ -105,7 +116,7 @@ include('header.php');
                 <img src="images/face_wash.jpg" class="img-fluid mb-3 rounded" style="max-height: 200px;">
                 <h5 class="aesthetic-heading">Weekend Reset</h5>
                 <p class="text-muted">Gentle care for your skin after a long week.</p>
-                <button class="btn btn-aesthetic">View Details</button>
+                <a href="product.php?id=3" class="btn btn-aesthetic">View Details</a>
             </div>
         </div>
     </div>

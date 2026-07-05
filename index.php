@@ -5,20 +5,21 @@ include('header.php');
 ?>
 
 <!-- Full Background Hero Section -->
-<section class="hero-section">
+<section class="hero-section" style="background-color: var(--rosewater); padding: 50px 0;">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 hero-overlay">
+        <div class="row align-items-center">
+            <div class="col-md-6">
                 <h1 class="hero-title">Elevate Your Beauty</h1>
-                <p class="hero-desc">Premium products, unbeatable prices. <br> Your radiance, our commitment!</p>
-                
-                <a href="shop.php" class="btn btn-primary">Shop Now</a>
+                <p>Premium products, unbeatable prices. Your radiance, our commitment!</p>
+                <a href="shop.php" class="btn btn-premium">Shop Now</a>
+            </div>
+            
+            <div class="col-md-6">
+                <img src="images/banner.jpg" class="img-fluid" alt="Beauty Banner" style="border-radius: 15px;">
             </div>
         </div>
     </div>
 </section>
-
-
                 
             </div>
         </div>

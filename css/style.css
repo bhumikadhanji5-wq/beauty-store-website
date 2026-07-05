@@ -1,181 +1,99 @@
-/* ==========================================================================
-   1. Global Styles (Updated for Aesthetic Palette)
-   ========================================================================== */
+/* --- Brand Color Palette --- */
 :root {
-    --bg-color: #FDFBF7;
-    --text-color: #5D4037;
-    --border-color: #A1887F;
-    --accent-color: #D8A7B1;
-    --white: #FFFFFF;
+    --copper-rose: #A86A65;
+    --dusty-rose: #AB8882;
+    --rosewater: #D8A694;
+    --china-doll: #E0CBB9;
+    --plum-wine: #754B4D;
 }
 
+/* --- Global Settings --- */
 body {
-    background-color: var(--bg-color) !important;
-    color: var(--text-color) !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    background-color: var(--china-doll); /* Lightest background */
+    color: var(--plum-wine);             /* Dark main text */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* --- Headings --- */
+h1, h2, h3, h4, h5 {
+    color: var(--plum-wine);
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+}
+
+/* --- Navbar (Clean Look) --- */
 .navbar {
-    /* --- Aesthetic Header Variables --- */
-:root {
-    --nav-bg: #FFFFFF;
-    --text-brown: #5D4037;
-    --soft-pink: #D8A7B1;
-    --off-white-bg: #FDFBF7;
+    background-color: var(--china-doll) !important;
+    border-bottom: 1px solid var(--rosewater);
 }
 
-/* 1. Top Announcement Bar (Jo sabse upar hota hai) */
-.announcement-bar {
-    background-color: var(--off-white-bg);
-    color: var(--text-brown);
-    font-size: 12px;
-    padding: 5px 0;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-/* 2. Main Navbar Styling */
-.navbar {
-    background-color: var(--nav-bg) !important;
-    padding: 15px 0 !important;
-    border-bottom: 1px solid #f0f0f0 !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-}
-
-.navbar-brand {
-    color: var(--soft-pink) !important;
-    font-weight: 700 !important;
-    font-size: 24px !important;
-    letter-spacing: 1px;
-}
-
-/* 3. Navigation Links */
 .nav-link {
-    color: var(--text-brown) !important;
-    font-weight: 500 !important;
-    margin: 0 10px;
-    transition: 0.3s;
+    color: var(--plum-wine) !important;
+    font-weight: 600;
 }
 
-.nav-link:hover {
-    color: var(--soft-pink) !important;
-}
-
-/* 4. Icons (Cart, Wishlist) */
-.navbar-icons a {
-    color: var(--text-brown) !important;
-    margin-left: 15px;
-    font-size: 18px;
-}
-
-.navbar-icons a:hover {
-    color: var(--soft-pink) !important;
-}
-}
-
-/* ==========================================================================
-   2. Banner Section (Logic Kept Same)
-   ========================================================================== */
-/* Hero Section Styling */
-/* Premium Hero Section */
+/* --- Hero Section (The Premium Look) --- */
 .hero-section {
-    background-image: url('../images/banner.jpg'); /* Apni image ka path sahi rakhein */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--rosewater);
+    color: var(--plum-wine);
     padding: 100px 0;
     min-height: 500px;
     display: flex;
     align-items: center;
 }
 
-.hero-content {
-    background: rgba(255, 255, 255, 0.85); /* Halka white background readability ke liye */
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #2D2D2D;
-    margin-bottom: 15px;
-}
-
-.hero-desc {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 25px;
-}
-
+/* --- Buttons (Brand Style) --- */
 .btn-premium {
-    background-color: #E91E63;
+    background-color: var(--copper-rose);
     color: white;
     padding: 12px 30px;
     border-radius: 50px;
+    border: none;
     font-weight: 600;
-    text-decoration: none;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .btn-premium:hover {
-    background-color: #C2185B;
+    background-color: var(--plum-wine);
     color: white;
+    transform: translateY(-2px);
+}
+/* --- Product Card Fix --- */
+.product-card {
+    background-color: white;
+    border: 1px solid var(--rosewater);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-/* ==========================================================================
-   3. Circular Category Section (Logic Kept Same)
-   ========================================================================== */
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* --- Cards / Sections Background --- */
+.product-card {
+    background-color: white;
+    border: 1px solid var(--rosewater);
+    border-radius: 15px;
+    padding: 20px;
+}
+/* Category Styling */
 .category-img {
-    width: 120px !important;
-    height: 120px !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-    border: 3px solid var(--border-color) !important;
-    display: block !important;
-    margin: 0 auto !important;
-    transition: all 0.3s ease !important;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--rosewater);
+    transition: 0.3s;
 }
 
 .category-img:hover {
-    transform: scale(1.1) !important;
-    border-color: var(--accent-color) !important;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
-}
-
-.fw-bold {
-    font-weight: 700 !important;
-    margin-top: 12px !important;
-    color: var(--text-color) !important;
-}
-
-/* ==========================================================================
-   4. Product Cards (Logic Kept Same)
-   ========================================================================== */
-.card {
-    transition: all 0.3s ease-in-out !important;
-    border: none !important;
-    background-color: var(--white) !important;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
-}
-
-.card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.1) !important;
-}
-
-/* ==========================================================================
-   5. Mobile Responsiveness (Logic Kept Same)
-   ========================================================================== */
-@media (max-width: 576px) {
-    .category-img {
-        width: 80px !important;
-        height: 80px !important;
-    }
-    .hero-banner {
-        height: 250px !important;
-    }
+    border-color: var(--copper-rose);
+    transform: scale(1.05);
 }

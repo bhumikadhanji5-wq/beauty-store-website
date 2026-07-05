@@ -81,7 +81,7 @@ body {
 /* Hero Section Styling */
 /* Premium Hero Section */
 .hero-section{
-    background-image: url("../images/banner.jpg") !important;
+   background-image: url("../images/we.jfif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
